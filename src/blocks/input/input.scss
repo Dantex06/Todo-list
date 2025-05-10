@@ -1,0 +1,29 @@
+.input {
+  height: 70px;
+
+  background: var(--beige-100);
+  border: 1px solid var(--beige-200);
+  font-weight: 400;
+
+  font-size: 20px;
+
+  color: var(--black);
+
+  padding: 20px;
+
+  &::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: var(--gray-300);
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: var(--beige-200);
+  }
+
+  &:focus {
+    border: 1px solid var(--gray-300);
+    background: var(--beige-200);
+    outline: none;
+  }
+}

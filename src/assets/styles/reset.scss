@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, a, p, span, li {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}

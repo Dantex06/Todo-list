@@ -1,0 +1,74 @@
+.todo-block {
+  margin: 0 auto;
+  width: 1000px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 25px;
+  &_input {
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  &_list {
+    width: 100%;
+
+    background: var(--beige-100);
+    border: 1px solid var(--beige-200);
+
+    &_item {
+      height: 50px;
+
+      font-size: 20px;
+
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      padding: 20px;
+    }
+  }
+
+  &_task-bar {
+    height: 60px;
+    width: 100%;
+
+
+    font-size: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+
+    &_count {
+      min-width: 150px;
+    }
+
+    &_list {
+      &_items {
+        min-width: 300px;
+
+        display: flex;
+        gap: 15px;
+        &_item {
+          font-size: 20px;
+
+        }
+      }
+    }
+
+    &_clear-button {
+      min-width: 230px;
+
+      cursor: pointer;
+      font-size: 20px;
+
+      background: none;
+    }
+  }
+}
