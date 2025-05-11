@@ -1,13 +1,14 @@
 .todo-block {
-  margin: 0 auto;
-  width: 1000px;
+  max-width: 1000px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  padding-top: 25px;
+  margin: 0 auto;
+  padding: 25px 10px 0 10px;
+
   &_input {
     margin-top: 25px;
     width: 100%;
@@ -21,13 +22,10 @@
 
     &_item {
       height: 50px;
-
       font-size: 20px;
-
       display: flex;
       align-items: center;
       gap: 15px;
-
       padding: 20px;
     }
   }
@@ -35,7 +33,6 @@
   &_task-bar {
     height: 60px;
     width: 100%;
-
 
     font-size: 20px;
 
@@ -45,14 +42,8 @@
 
     padding: 20px;
 
-    &_count {
-      min-width: 150px;
-    }
-
     &_list {
       &_items {
-        min-width: 300px;
-
         display: flex;
         gap: 15px;
         &_item {
@@ -69,6 +60,36 @@
       font-size: 20px;
 
       background: none;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .todo-block {
+    &_task-bar {
+      padding: 0;
+      position: relative;
+      &_count {
+        text-align: center;
+        font-size: 18px;
+      }
+      &_list {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        &_items {
+          gap: 10px;
+
+          &_item {
+            font-size: 18px;
+          }
+        }
+      }
+      &_clear-button {
+        min-width: 180px;
+        font-size: 18px;
+      }
     }
   }
 }

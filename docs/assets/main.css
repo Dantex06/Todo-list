@@ -30,7 +30,7 @@
   content: "";
   position: absolute;
   top: 2px;
-  left: 6px;
+  left: 5px;
   width: 8px;
   height: 12px;
   border: solid #000;
@@ -64,13 +64,13 @@
 }
 
 .todo-block {
-  margin: 0 auto;
-  width: 1000px;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 25px;
+  margin: 0 auto;
+  padding: 25px 10px 0 10px;
 }
 .todo-block_input {
   margin-top: 25px;
@@ -98,11 +98,7 @@
   align-items: center;
   padding: 20px;
 }
-.todo-block_task-bar_count {
-  min-width: 150px;
-}
 .todo-block_task-bar_list_items {
-  min-width: 300px;
   display: flex;
   gap: 15px;
 }
@@ -116,6 +112,32 @@
   background: none;
 }
 
+@media (max-width: 800px) {
+  .todo-block_task-bar {
+    padding: 0;
+    position: relative;
+  }
+  .todo-block_task-bar_count {
+    text-align: center;
+    font-size: 18px;
+  }
+  .todo-block_task-bar_list {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .todo-block_task-bar_list_items {
+    gap: 10px;
+  }
+  .todo-block_task-bar_list_items_item {
+    font-size: 18px;
+  }
+  .todo-block_task-bar_clear-button {
+    min-width: 180px;
+    font-size: 18px;
+  }
+}
 @font-face {
   font-family: "Roboto";
   src: url("fonts/Roboto-Regular.woff2") format("woff2");
@@ -287,7 +309,7 @@ body, html {
   content: "";
   position: absolute;
   top: 2px;
-  left: 6px;
+  left: 5px;
   width: 8px;
   height: 12px;
   border: solid #000;
@@ -319,13 +341,13 @@ body, html {
   outline: none;
 }
 .todo-block {
-  margin: 0 auto;
-  width: 1000px;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 25px;
+  margin: 0 auto;
+  padding: 25px 10px 0 10px;
 }
 .todo-block_input {
   margin-top: 25px;
@@ -353,11 +375,7 @@ body, html {
   align-items: center;
   padding: 20px;
 }
-.todo-block_task-bar_count {
-  min-width: 150px;
-}
 .todo-block_task-bar_list_items {
-  min-width: 300px;
   display: flex;
   gap: 15px;
 }
@@ -369,5 +387,32 @@ body, html {
   cursor: pointer;
   font-size: 20px;
   background: none;
+}
+
+@media (max-width: 800px) {
+  .todo-block_task-bar {
+    padding: 0;
+    position: relative;
+  }
+  .todo-block_task-bar_count {
+    text-align: center;
+    font-size: 18px;
+  }
+  .todo-block_task-bar_list {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .todo-block_task-bar_list_items {
+    gap: 10px;
+  }
+  .todo-block_task-bar_list_items_item {
+    font-size: 18px;
+  }
+  .todo-block_task-bar_clear-button {
+    min-width: 180px;
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
